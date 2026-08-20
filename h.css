@@ -1,0 +1,11 @@
+td, li, ul, title, body {
+  color: yellow;
+}
+
+html {
+    background-color: grey;
+}
+
+body {
+    font-family: Tahoma;
+}
