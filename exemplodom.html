@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>||Working with elements||</title>
+    </head>
+    <body>
+        <div id="div1">
+            O texto sera criado dinamicamente.
+        </div>
+        <script>
+            document.body.onload = addElement;
+            function addElement () {
+        // cria um novo elemento DIV //
+            var newDiv = document.createElement( "div" );
+        // e adiciona um conteudo //
+            var newContent = document.createTextNode( "Ola ;)" );
+        // adiciona o nó texto ao elemento DIV criado //
+            newDiv.appendChild( newContent );
+        // obtem o elemento com id "div1" //
+            var currentDiv = document.getElementById( "div1" );
+        // insere o novo elemento apos o elemento de id "div1" //
+            document.body.insertBefore(newDiv, currentDiv);
+        }
+        </script>
+    </body>
+</html>

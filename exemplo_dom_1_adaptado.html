@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>||Working with elements||</title>
+    </head>
+    <body>
+        <table border="1" id="tab1"></table>
+        <script>
+            document.body.onload = addElements;
+            function addElements () {
+                // obtem o elemento com id "tab1" //
+                var currentTabela = document.getElementById( "tab1" );
+
+                for( let i=1; i<=40; i=i+1 ){
+                    // cria um novo elemento TR //
+                    var newTr = document.createElement( "tr" );
+                    
+                    // adiciona o nó tr ao elemento table em currentTabela //
+                    currentTabela.appendChild( newTr );
+
+                    for( let j=1; j<=30; j=j+1 ){
+                        // cria um novo elemento TD //
+                        var newTd = document.createElement( "td" );
+                        newTd.textContent = "i=" + i + " j=" + j;
+                        let r = (i*6)%256;
+                        let g = (j*8)%256;
+                        let b = ((i+j)*3)%256;
+                        newTd.style.backgroundColor = "rgb("+r+","+g+","+b+")";
+                        // adiciona o nó td ao elemento tr criado //
+                        newTr.appendChild( newTd );
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
